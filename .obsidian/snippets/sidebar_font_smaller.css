@@ -1,0 +1,4 @@
+:root, body, .view-content {
+  --nav-item-size: 0.87em; 
+  --line-height-tight: 1.15em; /* adjust line-height */
+}

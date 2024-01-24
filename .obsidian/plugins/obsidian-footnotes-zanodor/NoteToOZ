@@ -1,0 +1,8 @@
+A Main.Js file-ban átírtam egy sort, hogy a Lábjegyzet: rész is benne legyen:  
+`{footNoteId}]: `;`
+helyett:  
+`{footNoteId}]: Lábjegyzet:  `;`.
+
+Ezt majd a plugin esetleges update-elése után vissza kell javítani.  
+
+Közben mivel egy update a mobilon felsült (nem töltötte be), úgy jártam el, mint a Quiet Outline pluginnál: custom manifest-eltem és nem lesz update értesítés és gebasz.  

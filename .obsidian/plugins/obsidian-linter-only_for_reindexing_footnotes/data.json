@@ -1,0 +1,346 @@
+{
+  "ruleConfigs": {
+    "escape-yaml-special-characters": {
+      "enabled": false,
+      "try-to-escape-single-line-arrays": false
+    },
+    "force-yaml-escape": {
+      "enabled": false,
+      "force-yaml-escape-keys": ""
+    },
+    "format-tags-in-yaml": {
+      "enabled": true
+    },
+    "format-yaml-array": {
+      "enabled": true,
+      "alias-key": true,
+      "tag-key": true,
+      "default-array-style": "multi-line",
+      "default-array-keys": true,
+      "force-single-line-array-style": "",
+      "force-multi-line-array-style": "aliases\nalias2\nalias3\ntags\ntopic\nparent_topic\nchild_topic\ntopic_alternative\nrelated_topic"
+    },
+    "insert-yaml-attributes": {
+      "enabled": false,
+      "text-to-insert": "aliases: \ntags: \nstatus:\npriority:\nclass:"
+    },
+    "move-tags-to-yaml": {
+      "enabled": false,
+      "how-to-handle-existing-tags": "Nothing",
+      "tags-to-ignore": ""
+    },
+    "remove-yaml-keys": {
+      "enabled": true,
+      "yaml-keys-to-remove": "stitched on"
+    },
+    "yaml-key-sort": {
+      "enabled": true,
+      "yaml-key-priority-sort-order": "obsidianUIMode\ntitle\naliases\nalias2\nalias3\ntype\nstatus\npriority\ntags\ncssclasses\nbanner\nbanner_x\nbanner_y\nshare\ndg-home\ndg-publish\ndg-created\ndg-updated\ndg_upload_status\nclass\ntopic\ntopic_alternative\nparent_topic\nchild_topic\nrelated_topic\nheads-up\nrenamed\ncomment\ndate created\ndate modified",
+      "priority-keys-at-start-of-yaml": true,
+      "yaml-sort-order-for-other-keys": "None"
+    },
+    "yaml-timestamp": {
+      "enabled": true,
+      "date-created": true,
+      "date-created-key": "date created",
+      "force-retention-of-create-value": false,
+      "date-modified": true,
+      "date-modified-key": "date modified",
+      "format": "YYYY-MM-DD"
+    },
+    "yaml-title": {
+      "enabled": false,
+      "title-key": "title",
+      "mode": "filename"
+    },
+    "yaml-title-alias": {
+      "enabled": false,
+      "preserve-existing-alias-section-style": true,
+      "keep-alias-that-matches-the-filename": false,
+      "use-yaml-key-to-keep-track-of-old-filename-or-heading": false
+    },
+    "capitalize-headings": {
+      "enabled": false,
+      "style": "Title Case",
+      "ignore-case-words": true,
+      "ignore-words": "macOS, iOS, iPhone, iPad, JavaScript, TypeScript, AppleScript, I",
+      "lowercase-words": "via, a, an, the, and, or, but, for, nor, so, yet, at, by, in, of, on, to, up, as, is, if, it, for, to, with, without, into, onto, per"
+    },
+    "file-name-heading": {
+      "enabled": false
+    },
+    "header-increment": {
+      "enabled": false,
+      "start-at-h2": false
+    },
+    "headings-start-line": {
+      "enabled": false
+    },
+    "remove-trailing-punctuation-in-heading": {
+      "enabled": false,
+      "punctuation-to-remove": ".,;:!。，；：！"
+    },
+    "footnote-after-punctuation": {
+      "enabled": false
+    },
+    "move-footnotes-to-the-bottom": {
+      "enabled": false
+    },
+    "re-index-footnotes": {
+      "enabled": true
+    },
+    "auto-correct-common-misspellings": {
+      "enabled": false,
+      "ignore-words": ""
+    },
+    "convert-bullet-list-markers": {
+      "enabled": false
+    },
+    "emphasis-style": {
+      "enabled": false,
+      "style": "consistent"
+    },
+    "no-bare-urls": {
+      "enabled": false
+    },
+    "ordered-list-style": {
+      "enabled": false,
+      "number-style": "ascending",
+      "list-end-style": "."
+    },
+    "proper-ellipsis": {
+      "enabled": false
+    },
+    "remove-consecutive-list-markers": {
+      "enabled": false
+    },
+    "remove-empty-list-markers": {
+      "enabled": false
+    },
+    "remove-hyphenated-line-breaks": {
+      "enabled": false
+    },
+    "remove-multiple-spaces": {
+      "enabled": true
+    },
+    "strong-style": {
+      "enabled": false,
+      "style": "consistent"
+    },
+    "two-spaces-between-lines-with-content": {
+      "enabled": true
+    },
+    "unordered-list-style": {
+      "enabled": false,
+      "list-style": "consistent"
+    },
+    "compact-yaml": {
+      "enabled": true,
+      "inner-new-lines": false
+    },
+    "consecutive-blank-lines": {
+      "enabled": true
+    },
+    "convert-spaces-to-tabs": {
+      "enabled": false,
+      "tabsize": "2"
+    },
+    "empty-line-around-blockquotes": {
+      "enabled": false
+    },
+    "empty-line-around-code-fences": {
+      "enabled": false
+    },
+    "empty-line-around-math-blocks": {
+      "enabled": false
+    },
+    "empty-line-around-tables": {
+      "enabled": true
+    },
+    "heading-blank-lines": {
+      "enabled": false,
+      "bottom": false,
+      "empty-line-after-yaml": false
+    },
+    "line-break-at-document-end": {
+      "enabled": false
+    },
+    "move-math-block-indicators-to-their-own-line": {
+      "enabled": false
+    },
+    "paragraph-blank-lines": {
+      "enabled": false
+    },
+    "remove-empty-lines-between-list-markers-and-checklists": {
+      "enabled": false
+    },
+    "remove-link-spacing": {
+      "enabled": false
+    },
+    "remove-space-around-characters": {
+      "enabled": false,
+      "include-fullwidth-forms": true,
+      "include-cjk-symbols-and-punctuation": true,
+      "include-dashes": true,
+      "other-symbols": ""
+    },
+    "space-after-list-markers": {
+      "enabled": false
+    },
+    "space-between-chinese-japanese-or-korean-and-english-or-numbers": {
+      "enabled": false
+    },
+    "trailing-spaces": {
+      "enabled": true,
+      "twp-space-line-break": true
+    },
+    "add-blockquote-indentation-on-paste": {
+      "enabled": true
+    },
+    "prevent-double-checklist-indicator-on-paste": {
+      "enabled": true
+    },
+    "prevent-double-list-item-indicator-on-paste": {
+      "enabled": true
+    },
+    "proper-ellipsis-on-paste": {
+      "enabled": false
+    },
+    "remove-hyphens-on-paste": {
+      "enabled": false
+    },
+    "remove-leading-or-trailing-whitespace-on-paste": {
+      "enabled": false
+    },
+    "remove-leftover-footnotes-from-quote-on-paste": {
+      "enabled": false
+    },
+    "remove-multiple-blank-lines-on-paste": {
+      "enabled": false
+    },
+    "blockquote-style": {
+      "enabled": false,
+      "style": "space"
+    },
+    "quote-style": {
+      "enabled": false,
+      "single-quote-enabled": true,
+      "single-quote-style": "''",
+      "double-quote-enabled": false,
+      "double-quote-style": "\"\""
+    },
+    "remove-space-before-or-after-characters": {
+      "enabled": false,
+      "characters-to-remove-space-before": ",!?;:).’”]",
+      "characters-to-remove-space-after": "¿¡‘“(["
+    }
+  },
+  "lintOnSave": true,
+  "recordLintOnSaveLogs": false,
+  "displayChanged": false,
+  "lintOnFileChange": false,
+  "displayLintOnFileChangeNotice": false,
+  "settingsConvertedToConfigKeyValues": true,
+  "foldersToIgnore": [
+    "assets",
+    "pages",
+    "01 notes",
+    "02 analysis",
+    "03 writing",
+    "04 index",
+    "05 tasks",
+    "06 archives",
+    "07 diary",
+    "08 kanban",
+    "meta",
+    "meta/templater",
+    "02 Home",
+    "meta/templater",
+    "01 Index",
+    "35 Tables",
+    "70 Web iFrame Sites",
+    "00 System",
+    "99 Signs and Symbols",
+    "80 Omnivore",
+    "04 Excalidraw",
+    "999 Computerese",
+    "A/Templates",
+    "B/Templates",
+    "C/Templates",
+    "D/Templates",
+    "E/Templates",
+    "F/Templates",
+    "G/Templates",
+    "H/Templates",
+    "I/Templates",
+    "J/Templates",
+    "K/Templates",
+    "L/Templates",
+    "M/Templates",
+    "N/Templates",
+    "O/Templates",
+    "P/Templates",
+    "Q/Templates",
+    "R/Templates",
+    "S/Templates",
+    "T/Templates",
+    "U/Templates",
+    "V/Templates",
+    "W/Templates",
+    "X/Templates",
+    "Y/Templates",
+    "Z/Templates",
+    "assets/inlineScripts",
+    "support/inlineScripts"
+  ],
+  "linterLocale": "system-default",
+  "logLevel": "ERROR",
+  "lintCommands": [],
+  "customRegexes": [
+    {
+      "find": "õ",
+      "replace": "ő",
+      "flags": "gm"
+    },
+    {
+      "find": "Õ",
+      "replace": "Ő",
+      "flags": "gm"
+    },
+    {
+      "find": ",,",
+      "replace": "\"",
+      "flags": "gm"
+    },
+    {
+      "find": "„",
+      "replace": "\"",
+      "flags": "gm"
+    },
+    {
+      "label": "MAY NOT BE NEEDED remove superfluous YAML dashes from MetaEdit issue",
+      "find": "(date.*mod.*\\n)|(---\\n---\\n)",
+      "replace": "",
+      "flags": "gm"
+    },
+    {
+      "label": "Delete parent folder when using AlanG's embed script - uses [[A-Z/note]] format",
+      "find": "(!\\[\\[)[A-Z]\\/(.*?[#]\\^[0-9a-z]{4,10}\\]\\])",
+      "replace": "$1$2",
+      "flags": "gm"
+    },
+    {
+      "label": "remove inline queries",
+      "find": "\\n\\n^%%\\n```query[\\d\\D]*?^%%",
+      "replace": "",
+      "flags": "gm"
+    }
+  ],
+  "commonStyles": {
+    "aliasArrayStyle": "multi-line",
+    "tagArrayStyle": "multi-line",
+    "minimumNumberOfDollarSignsToBeAMathBlock": 2,
+    "escapeCharacter": "\"",
+    "removeUnnecessaryEscapeCharsForMultiLineArrays": true
+  }
+}

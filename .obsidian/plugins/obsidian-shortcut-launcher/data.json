@@ -1,0 +1,20 @@
+{
+  "launchers": [
+    {
+      "commandName": "NOT USED NOW - Append To HungarianDictionary3",
+      "shortcutName": "Append 2 TUDASTAR HungarianDictionary3",
+      "inputTypes": [
+        "Selected Text"
+      ],
+      "separator": ","
+    },
+    {
+      "commandName": "Append To HungarianDictionary2",
+      "shortcutName": "Append 2 TUDASTAR HungarianDictionary2",
+      "inputTypes": [
+        "Selected Text"
+      ],
+      "separator": ","
+    }
+  ]
+}

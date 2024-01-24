@@ -1,0 +1,102 @@
+/**-------------------**
+| LISTING STYLES (ul, li, ol)
+**--------------------**/
+
+.cm-s-obsidian span.cm-formatting-list {
+  color: var(--text-accent);
+}
+
+.markdown-source-view.mod-cm6 .list-bullet:after {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+.markdown-source-view.mod-cm6 .cm-indent::before {
+  border-width: 2px;
+  border-color: var(--text-accent);
+  margin-left: -1px;
+  opacity: 0.35;
+  transition: opacity 500ms linear ease-in-out;
+}
+
+.markdown-source-view.mod-cm6 .cm-active-indent::before {
+  opacity: 0.8;
+}
+
+/* Adding a rule line before ul list -- PREVIEW Mode */
+ul ul,
+ol ol,
+.markdown-preview-section > ul > li {
+  position: relative;
+}
+ol > li > ol::before,
+ul > li > ul::before {
+  content: '';
+  border-left: 2px solid var(--text-accent);
+  position: absolute;
+  opacity: 0.35;
+  left: -0.95em;
+  top: 0;
+  bottom: 0;
+}
+
+/* bullet lists */
+ul,
+ul ul,
+ol ul,
+ul ul ul,
+ol ul ul {
+  list-style: none;
+}
+li > p {
+  display: inline;
+}
+
+ul li:not(.task-list-item)::before {
+  content: '•';
+  color: var(--text-accent);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.15em;
+  padding: 0;
+  font-weight: bold;
+  text-shadow: 0 0 0.5em var(--accent-2);
+}
+ul ul li:not(.task-list-item)::before {
+  content: '•';
+}
+ul ul ul li:not(.task-list-item)::before {
+  content: '•';
+}
+
+/* numbered lists */
+ol {
+  list-style: none;
+  counter-reset: li;
+}
+ol > li {
+  counter-increment: li;
+}
+ol > li:not(.task-list-item)::before,
+ul ol > li:not(.task-list-item)::before,
+ul ul ol > li:not(.task-list-item)::before,
+ul ul ul ol > li:not(.task-list-item)::before {
+  content: '.' counter(li);
+  color: var(--text-a);
+  font-weight: normal;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  direction: rtl;
+  overflow: visible;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+/* rule line when there are checkboxes*/
+ul .task-list-item ul::before {
+  left: 0.15em !important;
+}

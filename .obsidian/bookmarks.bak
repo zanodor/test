@@ -1,0 +1,323 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1699069075636,
+      "path": "assets/MobileToolbarHelp.jpg"
+    },
+    {
+      "type": "file",
+      "ctime": 1697822173037,
+      "path": "meta/templater/Alias QuickSwitcher Zanodor plus Append with InlineQueries Template.md",
+      "title": "Query Template 1 (Alias QuickSwitcher Zanodor plus Append with InlineQueries Template)"
+    },
+    {
+      "type": "file",
+      "ctime": 1697822205132,
+      "path": "meta/templater/Insert InlineQueries Under YAML Template.md",
+      "title": "Query Template 2 (Insert InlineQueries Under YAML Template)"
+    },
+    {
+      "type": "file",
+      "ctime": 1700233956484,
+      "path": "meta/templater/Transform author and material template PC.md"
+    },
+    {
+      "type": "file",
+      "ctime": 1700233969946,
+      "path": "meta/templater/Transform author and material template Mobile Case I.md"
+    },
+    {
+      "type": "search",
+      "ctime": 1701915247250,
+      "query": "[\"status\": nopublish-unformatted]"
+    },
+    {
+      "type": "file",
+      "ctime": 1694088945297,
+      "path": "999 Computerese/Obsidian Templater Brainstorming Ideas.md",
+      "title": ""
+    },
+    {
+      "type": "file",
+      "ctime": 1693925580227,
+      "path": "999 Computerese/Obsidian Templater Snippets.md"
+    },
+    {
+      "type": "file",
+      "path": "999 Computerese/Notepad++ work to be done on my vault.md",
+      "ctime": 1683111294654
+    },
+    {
+      "type": "file",
+      "path": "999 Computerese/Obsidian Typing Transformer plugin.md",
+      "ctime": 1683111294654
+    },
+    {
+      "type": "file",
+      "path": "meta/templater/HOW TO MAKE NEW TEMPLATES.txt",
+      "ctime": 1683111294654
+    },
+    {
+      "type": "file",
+      "path": "999 Computerese/Obsidian Zoottelkeeper plugin.md",
+      "ctime": 1683111294654
+    },
+    {
+      "type": "file",
+      "path": "100 TODO/100 TODO.md",
+      "ctime": 1683111294654,
+      "title": "100 TODO"
+    },
+    {
+      "type": "file",
+      "path": "60 Dictionary/HungarianDictionary2.txt",
+      "ctime": 1683111294654
+    },
+    {
+      "type": "group",
+      "ctime": 1694088981676,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1694048703395,
+          "path": "999 Computerese/Obsidian non-Zotero PDF annotations and linking to them (on desktop).md",
+          "title": "Obsidian non-Zotero PDF workflow: annotations and linking to them"
+        },
+        {
+          "type": "folder",
+          "ctime": 1694025662910,
+          "path": "assets/symlinked_linux",
+          "title": "AllMyPDFs_Linux_symlinked (attach SeaGate)"
+        },
+        {
+          "type": "folder",
+          "ctime": 1694025620615,
+          "path": "assets/symlinked_windows",
+          "title": "AllMyPDFs_Windows_symlinked (attach SeaGate)"
+        },
+        {
+          "type": "search",
+          "ctime": 1694522960837,
+          "query": "file: /huns.*[.]pdf",
+          "title": "PDF search regex"
+        }
+      ],
+      "title": "PDF Workflow"
+    },
+    {
+      "type": "group",
+      "ctime": 1693432930467,
+      "items": [
+        {
+          "type": "search",
+          "ctime": 1687817935405,
+          "query": "line: (török nyelv)",
+          "title": "Word stem search: Same-line matches of multi-word searches"
+        },
+        {
+          "type": "search",
+          "ctime": 1693432824889,
+          "query": " /török nyelv",
+          "title": "Better than the one above: Two string search simplest (ragozott alakokat is megtalálja)"
+        }
+      ],
+      "title": "FINE-TUNING MY SEARCHES"
+    },
+    {
+      "type": "group",
+      "ctime": 1686665443335,
+      "items": [
+        {
+          "type": "search",
+          "ctime": 1692409119253,
+          "query": "/title:\\s[a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+",
+          "title": "Néha rákeresni, hogy a frontmatter update nem-e lowercase-elte a title-ban a szöveget – mobilon disable-eztem"
+        },
+        {
+          "type": "search",
+          "ctime": 1688825945705,
+          "query": "/^#{1}\\s.*?,.*",
+          "title": "Heading1 matches Title or not (must use tags in YAML)"
+        },
+        {
+          "type": "search",
+          "ctime": 1686664203543,
+          "query": "/–\\s.+?-\\s",
+          "title": "En-dashek után nem mindig n-dash jön záróként"
+        },
+        {
+          "type": "search",
+          "title": "content:/^Magyar Adorján.*ja:/",
+          "query": "content:/^Magyar Adorján.*ja:/",
+          "ctime": 1683111294654
+        },
+        {
+          "type": "search",
+          "ctime": 1688554139100,
+          "query": "/([{}[()*\"'!1-9a-zA-ZÀ-ŰØ-űø-ÿ]+)\\s(\\(|\\\\\\[)(lásd\\s)(\\[\\[)([{}[()*\"'!1-9a-zA-ZÀ-ŰØ-űø-ÿ]+)(\\]\\])(\\)|\\\\\\])",
+          "title": "Lásd címnél"
+        },
+        {
+          "type": "search",
+          "ctime": 1691578603636,
+          "query": "/\\[\\[.*?\\s.*?(a|e)\\]\\][a-záé]",
+          "title": "A/E végződések"
+        },
+        {
+          "type": "search",
+          "ctime": 1693139720382,
+          "query": "/!\\[image\\]\\([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ]",
+          "title": "Check for missing assets/ prefix in image links"
+        },
+        {
+          "type": "search",
+          "ctime": 1695125996507,
+          "query": "-file: /.*\\.md",
+          "title": "List all non-markdown files"
+        }
+      ],
+      "title": "Misc. Searches"
+    },
+    {
+      "type": "group",
+      "ctime": 1691364420601,
+      "items": [
+        {
+          "type": "search",
+          "ctime": 1691367755256,
+          "query": "file: Magyar.md content:/(?<!`)([^`.*?`\\s=]*?\\s=)",
+          "title": "FILE SEARCH UNDONE LEXICAL ITEMS"
+        },
+        {
+          "type": "search",
+          "ctime": 1691408756632,
+          "query": "file: Magyar.md content:/(?<!`|\\)|\\]|[0-9A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])([^`.*?`|`.*?`\\s\\(.*?\\)|`.*?`\\[\\^[0-9){1,3\\]|[0-9A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ+.*?|\\[\\[.*?\\]\\]\\s=]*?\\s=)",
+          "title": "FILE SEARCH UNDONE LEXICAL ITEMS 2"
+        },
+        {
+          "type": "search",
+          "ctime": 1691800686427,
+          "query": "/(?<!`)([^`.*?`\\s=]*?\\s=)",
+          "title": "FILE SEARCH UNDONE LEXICAL ITEMS 3"
+        },
+        {
+          "type": "search",
+          "ctime": 1691486679116,
+          "query": "file: Száj.md content:/.*?\\s=",
+          "title": "FILE SEARCH UNDONE LEXICAL ITEMS 4 MOBILON CSAK EZ MEGY"
+        },
+        {
+          "type": "search",
+          "ctime": 1693148985804,
+          "query": "tag:#todo",
+          "title": "Todo (tag) search: megoldandó témák"
+        },
+        {
+          "type": "search",
+          "ctime": 1695064298271,
+          "query": "/!\\[\\[.*?#\\^.*?\\]\\]",
+          "title": "Transclusion Content"
+        },
+        {
+          "type": "search",
+          "ctime": 1695604075502,
+          "query": "/\\^[0-9a-z]{6}$",
+          "title": "Block ID Search"
+        },
+        {
+          "type": "search",
+          "ctime": 1692975608973,
+          "query": "/\\*{2}.*?\\*{2}\\sszavunk",
+          "title": "Ezeket is intézni majd"
+        },
+        {
+          "type": "search",
+          "ctime": 1698296051776,
+          "query": "/^(?!\\s*>\\s).*(\\b(that|the|he|she|was|were|have|are|they|with|this|or|not|but|from|by|if|how|where|when|why|of)\\b)[^áéíóöőúüű].*",
+          "title": "English texts to translate"
+        }
+      ],
+      "title": "Search Daily"
+    },
+    {
+      "type": "group",
+      "ctime": 1691850092381,
+      "items": [
+        {
+          "type": "search",
+          "ctime": 1697949296961,
+          "query": "/.(a|e)\\*\\*[a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]",
+          "title": "A/E csillagok előtt"
+        },
+        {
+          "type": "search",
+          "ctime": 1691073669545,
+          "query": "/^>\\s.*\\n\\n.*?(olytatást|itérő|betéve[.]|mit\\sután|egjegyzés|ásd errő)",
+          "title": "Regex job DONE"
+        },
+        {
+          "type": "search",
+          "ctime": 1691244603871,
+          "query": "/(\\[\\[)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ]+)(a|e)(\\|)([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(a|e)\\]\\][a-z]",
+          "title": "JOB done"
+        },
+        {
+          "type": "search",
+          "ctime": 1691850017389,
+          "query": "/^>.*\\n\\n(?!#{2,4}|.*\\.{3}).*[.?!]\\n",
+          "title": "Looking for dash-able lines where there was no soft line break DONE with Notepad++"
+        },
+        {
+          "type": "search",
+          "ctime": 1692203536956,
+          "query": "/(\\[\\^[0-9]{1,2}\\]:\\sLábjegyze[^\\n]*)\\n(.*?)\\s((?<!\\]\\]\\s)címnél)",
+          "title": "Links in footnotes sorted"
+        },
+        {
+          "type": "search",
+          "ctime": 1692219193445,
+          "query": "/((?<!\\]\\]|mely|más|utóbbi|előbbi|külön|több|sok|rengeteg|annál\\sa|azon|ezen|[.]|\\))\\scímnél)",
+          "title": "Links needed DONE"
+        }
+      ],
+      "title": "DONE"
+    },
+    {
+      "type": "search",
+      "ctime": 1699581996103,
+      "query": "tag:#dg_uploaded -tag:#englishtexttranslated /^.*(\\b(that|the|he|she|was|were|have|are|they|with|this|or|not|but|from|by|if|how|where|when|why|of)\\b)[^áéíóöőúüű].*/"
+    },
+    {
+      "type": "search",
+      "ctime": 1700840912169,
+      "query": "Magor/Solaris"
+    },
+    {
+      "type": "search",
+      "ctime": 1700846100263,
+      "query": "/kúnok.*?\\/hunok.*?"
+    },
+    {
+      "type": "search",
+      "ctime": 1700849452498,
+      "query": "Hunor-Széth-Szíriusz",
+      "title": "Hunor-Széth-Szíriusz -- ez a nevezet maradhat"
+    },
+    {
+      "type": "search",
+      "ctime": 1700915460035,
+      "query": "/Hunor\\(X\\)"
+    },
+    {
+      "type": "search",
+      "ctime": 1701461603816,
+      "query": "\"Szíriusz B\""
+    },
+    {
+      "type": "search",
+      "ctime": 1701466990680,
+      "query": "társcsillag"
+    }
+  ]
+}

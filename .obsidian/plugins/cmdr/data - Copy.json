@@ -1,0 +1,454 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": false,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "global-search:open",
+      "icon": "lucide-search",
+      "name": "Search: Search in all files",
+      "mode": "any"
+    },
+    {
+      "id": "editor:open-search-replace",
+      "icon": "file-search",
+      "name": "Find & replace",
+      "mode": "any"
+    },
+    {
+      "id": "cmdr:macro-6",
+      "icon": "target",
+      "name": "Commander: Enable Quick switcher++ then HeadingMode",
+      "mode": "any"
+    },
+    {
+      "id": "cmdr:macro-11",
+      "icon": "lint-file",
+      "name": "Commander: Sort out LDV properties macro",
+      "mode": "any"
+    },
+    {
+      "id": "cmdr:macro-12",
+      "icon": "thumbs-up",
+      "name": "Commander: Lint File & Formatting Done",
+      "mode": "any"
+    },
+    {
+      "id": "cmdr:macro-13",
+      "icon": "save",
+      "name": "Commander: Save4UpdateModified&CloseTab",
+      "mode": "any"
+    },
+    {
+      "id": "editor:toggle-source",
+      "icon": "lucide-code-2",
+      "name": "Toggle Live Preview/Source mode",
+      "mode": "any"
+    }
+  ],
+  "macros": [
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "workspace:split-horizontal"
+        },
+        {
+          "action": 1,
+          "delay": "150"
+        },
+        {
+          "action": 0,
+          "commandId": "editor:focus-bottom"
+        }
+      ],
+      "name": "SplitDown'n'Focus",
+      "icon": "arrow-down"
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-footnotes-zanodor:insert-footnote"
+        }
+      ],
+      "name": "Footnote",
+      "icon": "facebook"
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-regex-replace:obsidian-regex-replace"
+        }
+      ],
+      "name": "Regex Find/Replace",
+      "icon": "repeat-1"
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "editor:toggle-comments"
+        },
+        {
+          "action": 0,
+          "commandId": "editor:toggle-strikethrough"
+        }
+      ],
+      "name": "Make Rubbish Invisible",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-4-selection"
+        },
+        {
+          "action": 1,
+          "delay": "0"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-6-selection"
+        },
+        {
+          "action": 1,
+          "delay": "0"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-editor-shortcuts:transformToTitlecase"
+        },
+        {
+          "action": 1,
+          "delay": "0"
+        },
+        {
+          "action": 0,
+          "commandId": "editor:insert-wikilink"
+        }
+      ],
+      "name": "Linkify",
+      "icon": "sigma",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-shortcut-launcher:append-to-hungariandictionary2"
+        },
+        {
+          "action": 1,
+          "delay": "2950"
+        },
+        {
+          "action": 0,
+          "commandId": "various-complements:reload-custom-dictionaries"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-3-selection"
+        }
+      ],
+      "name": "Append&Reload Dictionary2",
+      "icon": "at-sign",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "uri-commands:enable-quickswitcher++-plugin1689264961253"
+        },
+        {
+          "action": 1,
+          "delay": "800"
+        },
+        {
+          "action": 0,
+          "commandId": "darlal-switcher-plus:switcher-plus:open-headings"
+        },
+        {
+          "action": 1,
+          "delay": "200000"
+        },
+        {
+          "action": 0,
+          "commandId": "uri-commands:disable-quickswitcher++-plugin1689264999406"
+        }
+      ],
+      "name": "Enable Quick switcher++ then HeadingMode",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-15-selection"
+        }
+      ],
+      "name": "Alias For Title & Heading_lowercase",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-20-selection"
+        }
+      ],
+      "name": "AliasforTitle&Heading_upper_stays",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-21-selection"
+        }
+      ],
+      "name": "AliasRemoval",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-9-selection"
+        }
+      ],
+      "name": "RemoveWikilinksandAlias",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-23-document"
+        },
+        {
+          "action": 1,
+          "delay": "400"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-linter:lint-file"
+        },
+        {
+          "action": 1,
+          "delay": "4350"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-24-document"
+        }
+      ],
+      "name": "Sort out LDV properties macro",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-linter:lint-file"
+        },
+        {
+          "action": 1,
+          "delay": "1550"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-25-document"
+        }
+      ],
+      "name": "Lint File & Formatting Done",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-linter:lint-file-unless-ignored"
+        },
+        {
+          "action": 1,
+          "delay": "550"
+        },
+        {
+          "action": 0,
+          "commandId": "editor:save-file"
+        },
+        {
+          "action": 1,
+          "delay": "150"
+        },
+        {
+          "action": 0,
+          "commandId": "workspace:close"
+        }
+      ],
+      "name": "Save4UpdateModified&CloseTab",
+      "icon": "save",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-11-selection"
+        }
+      ],
+      "name": "RemoveSpacesToMakeWord",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-13-selection"
+        },
+        {
+          "action": 1,
+          "delay": "0"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-11-selection"
+        }
+      ],
+      "name": "FixWord (RemoveSpaces&CleanSelection)",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "templater-obsidian:meta/templater/Append HungarianDictionary3 Template.md"
+        },
+        {
+          "action": 1,
+          "delay": 250
+        },
+        {
+          "action": 0,
+          "commandId": "editor:undo"
+        },
+        {
+          "action": 1,
+          "delay": 250
+        },
+        {
+          "action": 0,
+          "commandId": "various-complements:reload-custom-dictionaries"
+        }
+      ],
+      "name": "Append and Reload HungarianDictionary3",
+      "icon": "star",
+      "startup": false
+    }
+  ],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": "11",
+  "advancedToolbar": {
+    "rowHeight": 36,
+    "rowCount": 2,
+    "spacing": 0,
+    "buttonWidth": 44,
+    "columnLayout": true,
+    "mappedIcons": [
+      {
+        "commandID": "app:toggle-right-sidebar",
+        "iconID": "arrow-right"
+      },
+      {
+        "commandID": "app:toggle-left-sidebar",
+        "iconID": "arrow-left"
+      },
+      {
+        "commandID": "workspace:new-tab",
+        "iconID": "plus-circle"
+      },
+      {
+        "commandID": "cmdr:macro-3",
+        "iconID": "brush"
+      },
+      {
+        "commandID": "cmdr:macro-5",
+        "iconID": "at-sign"
+      },
+      {
+        "commandID": "obsidian-shortcut-launcher:append-to-hungariandictionary2",
+        "iconID": "at-sign"
+      },
+      {
+        "commandID": "cmdr:macro-7",
+        "iconID": "bookmark-minus"
+      },
+      {
+        "commandID": "cmdr:macro-8",
+        "iconID": "links-going-out"
+      },
+      {
+        "commandID": "cmdr:macro-9",
+        "iconID": "image-plus"
+      },
+      {
+        "commandID": "cmdr:macro-10",
+        "iconID": "baseline"
+      },
+      {
+        "commandID": "cmdr:macro-11",
+        "iconID": "bluetooth"
+      },
+      {
+        "commandID": "cmdr:macro-12",
+        "iconID": "separator-vertical"
+      },
+      {
+        "commandID": "cmdr:macro-13",
+        "iconID": "save"
+      },
+      {
+        "commandID": "cmdr:macro-14",
+        "iconID": "bookmark-minus"
+      },
+      {
+        "commandID": "cmdr:macro-15",
+        "iconID": "bookmark-minus"
+      },
+      {
+        "commandID": "cmdr:macro-16",
+        "iconID": "lucide-cross"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Apply Patterns - FixWord (RemoveSpacestoMakeaWord&Conver1tol) Template.md",
+        "iconID": "bookmark-minus"
+      }
+    ],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

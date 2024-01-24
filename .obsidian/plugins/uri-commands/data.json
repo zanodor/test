@@ -1,0 +1,73 @@
+{
+  "URICommands": [
+    {
+      "name": "Enable-Another-Quick-Switcher-plugin",
+      "id": "enable-another-quick-switcher-plugin1689264546329",
+      "URITemplate": "obsidian://advanced-uri?vault=TUDASTAR&enable-plugin=obsidian-another-quick-switcher",
+      "encode": true,
+      "icon": "plus"
+    },
+    {
+      "name": "Disable-Another-Quick-Switcher-plugin",
+      "id": "disable-another-quick-switcher-plugin1689264619888",
+      "URITemplate": "obsidian://advanced-uri?vault=TUDASTAR&disable-plugin=obsidian-another-quick-switcher",
+      "encode": true,
+      "icon": "minus"
+    },
+    {
+      "name": "Enable-QuickSwitcher++ plugin",
+      "id": "enable-quickswitcher++-plugin1689264961253",
+      "URITemplate": "obsidian://advanced-uri?vault=TUDASTAR&enable-plugin=darlal-switcher-plus",
+      "encode": true,
+      "icon": "plus"
+    },
+    {
+      "name": "Disable-QuickSwitcher++ plugin",
+      "id": "disable-quickswitcher++-plugin1689264999406",
+      "URITemplate": "obsidian://advanced-uri?vault=TUDASTAR&disable-plugin=darlal-switcher-plus",
+      "encode": true,
+      "icon": "minus"
+    },
+    {
+      "name": "Enable-Zotero-Integration-plugin",
+      "id": "enable-zotero-integration-plugin1689265766658",
+      "URITemplate": "obsidian://advanced-uri?vault=TUDASTAR&enable-plugin=obsidian-zotero-desktop-connector",
+      "encode": true,
+      "icon": "plus"
+    },
+    {
+      "name": "Disable-Zotero-Integration-plugin",
+      "id": "disable-zotero-integration-plugin1689265810594",
+      "URITemplate": "obsidian://advanced-uri?vault=TUDASTAR&disable-plugin=obsidian-zotero-desktop-connector",
+      "encode": true,
+      "icon": "minus"
+    },
+    {
+      "name": "Enable Quick-Explorer-plugin",
+      "id": "enable-quick-explorer-plugin1692649421723",
+      "URITemplate": "obsidian://advanced-uri?vault=TUDASTAR&enable-plugin=quick-explorer",
+      "encode": true,
+      "icon": "plus"
+    },
+    {
+      "name": "Disable Quick-Explorer-plugin",
+      "id": "disable-quick-explorer-plugin1692649523028",
+      "URITemplate": "obsidian://advanced-uri?vault=TUDASTAR&disable-plugin=quick-explorer",
+      "encode": true,
+      "icon": "minus"
+    },
+    {
+      "name": "Enable Linter 2 and do the thing",
+      "id": "enable-linter 2 and do the thing1698710166108",
+      "URITemplate": "obsidian://advanced-uri?vault=TUDASTAR&enable-plugin=obsidian-linter-reindexfootnotes",
+      "encode": true
+    },
+    {
+      "name": "Disable Linter2",
+      "id": "disable-linter21698710202675",
+      "URITemplate": "obsidian://advanced-uri?vault=TUDASTAR&disable-plugin=obsidian-linter-reindexfootnotes",
+      "encode": true
+    }
+  ],
+  "notification": false
+}

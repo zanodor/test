@@ -1,0 +1,532 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": false,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "global-search:open",
+      "icon": "lucide-search",
+      "name": "Search: Search in all files",
+      "mode": "any",
+      "color": "#61187c"
+    },
+    {
+      "id": "editor:open-search-replace",
+      "icon": "file-search",
+      "name": "Find & replace",
+      "mode": "any",
+      "color": "#831100"
+    },
+    {
+      "id": "cmdr0.5.0:macro-20",
+      "icon": "alarm-check",
+      "name": "Commander 0.5.0: Date Modified Updater",
+      "mode": "any",
+      "color": "#4e7a27"
+    },
+    {
+      "id": "editor:toggle-source",
+      "icon": "lucide-code-2",
+      "name": "Toggle Live Preview/Source mode",
+      "mode": "any",
+      "color": "#a96800"
+    }
+  ],
+  "macros": [
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "workspace:split-horizontal"
+        },
+        {
+          "action": 1,
+          "delay": "150"
+        },
+        {
+          "action": 0,
+          "commandId": "editor:focus-bottom"
+        }
+      ],
+      "name": "SplitDown'n'Focus",
+      "icon": "arrow-down"
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-footnotes-zanodor:insert-footnote"
+        }
+      ],
+      "name": "Footnote",
+      "icon": "facebook"
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-regex-replace:obsidian-regex-replace"
+        }
+      ],
+      "name": "Regex Find/Replace",
+      "icon": "repeat-1"
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "editor:toggle-comments"
+        },
+        {
+          "action": 0,
+          "commandId": "editor:toggle-strikethrough"
+        }
+      ],
+      "name": "Make Rubbish Invisible",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-4-selection"
+        },
+        {
+          "action": 1,
+          "delay": "0"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-6-selection"
+        },
+        {
+          "action": 1,
+          "delay": "0"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-editor-shortcuts:transformToTitlecase"
+        },
+        {
+          "action": 1,
+          "delay": "0"
+        },
+        {
+          "action": 0,
+          "commandId": "editor:insert-wikilink"
+        }
+      ],
+      "name": "Linkify",
+      "icon": "sigma",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-shortcut-launcher:append-to-hungariandictionary2"
+        },
+        {
+          "action": 1,
+          "delay": "2950"
+        },
+        {
+          "action": 0,
+          "commandId": "various-complements:reload-custom-dictionaries"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-3-selection"
+        }
+      ],
+      "name": "Append&Reload Dictionary2",
+      "icon": "at-sign",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "uri-commands:enable-quickswitcher++-plugin1689264961253"
+        },
+        {
+          "action": 1,
+          "delay": "800"
+        },
+        {
+          "action": 0,
+          "commandId": "darlal-switcher-plus:switcher-plus:open-headings"
+        },
+        {
+          "action": 1,
+          "delay": "200000"
+        },
+        {
+          "action": 0,
+          "commandId": "uri-commands:disable-quickswitcher++-plugin1689264999406"
+        }
+      ],
+      "name": "Enable Quick switcher++ then HeadingMode",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-15-selection"
+        }
+      ],
+      "name": "Alias For Title & Heading_lowercase",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-20-selection"
+        }
+      ],
+      "name": "AliasforTitle&Heading_upper_stays",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-21-selection"
+        }
+      ],
+      "name": "AliasRemoval",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-9-selection"
+        }
+      ],
+      "name": "RemoveWikilinksandAlias",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-23-document"
+        },
+        {
+          "action": 1,
+          "delay": "400"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-linter:lint-file"
+        },
+        {
+          "action": 1,
+          "delay": "4350"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-24-document"
+        }
+      ],
+      "name": "Sort out LDV properties macro",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-linter:lint-file"
+        },
+        {
+          "action": 1,
+          "delay": "1550"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-25-document"
+        }
+      ],
+      "name": "Lint File & Formatting Done",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-11-selection"
+        }
+      ],
+      "name": "RemoveSpacesToMakeWord",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-13-selection"
+        },
+        {
+          "action": 1,
+          "delay": "0"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-11-selection"
+        }
+      ],
+      "name": "FixWord (RemoveSpaces&CleanSelection)",
+      "icon": "bookmark-minus",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "templater-obsidian:meta/templater/Append HungarianDictionary3 Template.md"
+        },
+        {
+          "action": 1,
+          "delay": 250
+        },
+        {
+          "action": 0,
+          "commandId": "editor:undo"
+        },
+        {
+          "action": 1,
+          "delay": 250
+        },
+        {
+          "action": 0,
+          "commandId": "various-complements:reload-custom-dictionaries"
+        }
+      ],
+      "name": "Append and Reload HungarianDictionary3",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "templater-obsidian:meta/templater/Alias Template.md"
+        }
+      ],
+      "name": "AliasIt",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "templater-obsidian:meta/templater/DG created and updated Templater snippet.md"
+        }
+      ],
+      "name": "ZZZ_PublishCurrentNote and Sort YAML keys (Create, Update)",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "templater-obsidian:meta/templater/DG created and updated Netlify Templater snippet.md"
+        }
+      ],
+      "name": "YYY_Publish for Netlify Only and Sort YAML keys (Create, Update)",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "uri-commands:enable-linter 2 and do the thing1698710166108"
+        },
+        {
+          "action": 1,
+          "delay": "2500"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-linter-reindexfootnotes:lint-file"
+        },
+        {
+          "action": 1,
+          "delay": "3600"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-apply-patterns:apply-pattern-28-document"
+        },
+        {
+          "action": 1,
+          "delay": "3300"
+        },
+        {
+          "action": 0,
+          "commandId": "uri-commands:disable-linter21698710202675"
+        },
+        {
+          "action": 0,
+          "commandId": "uri-commands:disable-linter21698710202675"
+        }
+      ],
+      "name": "Enable Linter2 then Reindex Footnotes & Re-add empty lines",
+      "icon": "star",
+      "startup": false
+    },
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "templater-obsidian:meta/templater/Date Modified Updater Template.md"
+        }
+      ],
+      "name": "Date Modified Updater",
+      "icon": "alarm-check",
+      "startup": false
+    }
+  ],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": "11",
+  "advancedToolbar": {
+    "rowHeight": 44,
+    "rowCount": 3,
+    "spacing": 0,
+    "buttonWidth": 44,
+    "columnLayout": true,
+    "mappedIcons": [
+      {
+        "commandID": "app:toggle-right-sidebar",
+        "iconID": "arrow-right"
+      },
+      {
+        "commandID": "app:toggle-left-sidebar",
+        "iconID": "arrow-left"
+      },
+      {
+        "commandID": "workspace:new-tab",
+        "iconID": "plus-circle"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Alias Template.md",
+        "iconID": "align-horizontal-justify-center"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Insert Translation under Separator Template.md",
+        "iconID": "grip-horizontal"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Apply Patterns - FixWord (RemoveSpacestoMakeaWord&Conver1tol) Template.md",
+        "iconID": "bookmark-minus"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/DG created and updated no publish Templater snippet.md",
+        "iconID": "flag-triangle-left"
+      },
+      {
+        "commandID": "cmdr0.5.0:macro-5",
+        "iconID": "at-sign"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Insert InlineQueries Under YAML Template.md",
+        "iconID": "file-search"
+      },
+      {
+        "commandID": "cmdr0.5.0:macro-17",
+        "iconID": "upload-cloud"
+      },
+      {
+        "commandID": "cmdr0.5.0:macro-10",
+        "iconID": "minus-square"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Transform author and material template Mobile Case I.md",
+        "iconID": "tablet"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Transform author and material template PC.md",
+        "iconID": "laptop"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Selection to Uppercase Template.md",
+        "iconID": "arrow-up"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Selection to Lowercase Template.md",
+        "iconID": "arrow-down"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Clipboard aggregator Template.md",
+        "iconID": "plus-square"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Dg-publish false Template.md",
+        "iconID": "flashlight-off"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Swiss Army Knife Template.md",
+        "iconID": "user-check"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Paste Army Knife Reworked Template.md",
+        "iconID": "clipboard-copy"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Comment Out Text with Wikilinks and Add Frontmatter Property Template.md",
+        "iconID": "percent"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Paste Army Knife Reworked for Mobile Template.md",
+        "iconID": "clipboard-copy"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/SwishArmyKnife (Alter) Template.md",
+        "iconID": "user-x"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/User-inputted regex search in current file Template.md",
+        "iconID": "package-search"
+      },
+      {
+        "commandID": "obsidian-another-quick-switcher:backlink",
+        "iconID": "skip-back"
+      },
+      {
+        "commandID": "float-search:search-in-backlink",
+        "iconID": "sidebar-close"
+      },
+      {
+        "commandID": "templater-obsidian:meta/templater/Date Modified Updater Template.md",
+        "iconID": "calendar"
+      }
+    ],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

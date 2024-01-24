@@ -1,0 +1,2973 @@
+{
+  "patterns": [
+    {
+      "name": "OCR Cleanup Normal",
+      "rules": [
+        {
+          "from": ",,",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "„",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "õ",
+          "to": "ő",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "Õ",
+          "to": "Ő",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\s+$",
+          "to": "",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\r\\n)+|\\r+|\\n+",
+          "to": " ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(-\\s)([A-ZÁÉÍÓÖŐÚÜŰ])",
+          "to": "-$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß])(-\\s{1})(?!és\\s{1}|vagy\\s{1})([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß])",
+          "to": "$1$3",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ])\\s[1]\\s([a-zA-ZÀ-ŰØ-űø-ÿ]|[;,.?!-]|\\s|)",
+          "to": "$1l$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ])[1]\\s([a-zA-ZÀ-ŰØ-űø-ÿ]|[;,.?!-]|\\s|)",
+          "to": "$1l$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ])\\s[1]([a-zA-ZÀ-ŰØ-űø-ÿ]|[;,.?!-]|\\s|)",
+          "to": "$1l$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ])[1]([a-zA-ZÀ-ŰØ-űø-ÿ]|[;,.?!-]|\\s|)",
+          "to": "$1l$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ])(\\s|)(1)(\\s|)(1)(\\s|[a-zA-ZÀ-ŰØ-űø-ÿ]|[.,;?!-])",
+          "to": "$1$2l$4l$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "Scb([a-zA-ZÀ-ŰØ-űø-ÿ])",
+          "to": "Sch$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "ZoteroInt & OCR Cleanup",
+      "rules": [
+        {
+          "from": ",,",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "&#39;&#39;",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "&quot;",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": ";,",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "&#39;",
+          "to": "==&#39;==",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ]'|[a-zA-ZÀ-ŰØ-űø-ÿ]\")(\\s{1})(-|•|~)([a-zA-ZÀ-ŰØ-űø-ÿ]+)",
+          "to": "$1-$4",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^[0-9]{1,4})(\\.\\s)",
+          "to": "$1\\$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([\\D\\d]*?\\){2})\\n\\n\\s{1}\\n(^-)",
+          "to": "$1\\n$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "”",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "„",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "õ",
+          "to": "ő",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "Õ",
+          "to": "Ő",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(-\\s)\\n(?!s\\s|és\\s|vagy\\s)",
+          "to": "$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(-\\s\\n)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])",
+          "to": "-$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(-\\s\\n)([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß])",
+          "to": "$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\[(✅\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)(\\s)(–|-)(\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ][a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)\\.pdf\\]\\([a-zA-ZÀ-ŰØ-űø-ÿ].*?\\)\\n(>\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)",
+          "to": "#### $6$7$8$9$10$11$12 $2 című könyvében írja:\\n\\n$13$14",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\[(✅\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)(\\s)(–|-)(\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ][a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)\\.pdf\\]\\([a-zA-ZÀ-ŰØ-űø-ÿ].*?\\)\\n(>\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)",
+          "to": "#### $6$7$8$9 $2 című könyvében írja:\\n\\n$10$11",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\[(✅\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)(\\s)(–|-)(\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(-)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ][a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)\\.pdf\\]\\([a-zA-ZÀ-ŰØ-űø-ÿ].*?\\)\\n(>\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)",
+          "to": "#### $6$7$8$9$10$11$12 $2 című könyvében írja:\\n\\n$13$14",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\[(✅\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ][a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(\\s)(–|-)(\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)\\.pdf\\]\\([a-zA-ZÀ-ŰØ-űø-ÿ].*?\\)\\n(>\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)",
+          "to": "#### $2$3$4$5$6$7$8 $12 című könyvében írja:\\n\\n$13$14",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\[(✅\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(-)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ][a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(\\s)(–|-)(\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)\\.pdf\\]\\([a-zA-ZÀ-ŰØ-űø-ÿ].*?\\)\\n(>\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)",
+          "to": "#### $2$3$4$5$6$7$8 $12 című könyvében írja:\\n\\n$13$14",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\[(✅\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(\\s)([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ][a-zžáàäæãééíóöőüűčñßðđŋħjĸłß]+)(\\s)(–|-)(\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)\\.pdf\\]\\([a-zA-ZÀ-ŰØ-űø-ÿ].*?\\)\\n(>\\s)([a-zA-ZÀ-ŰØ-űø-ÿ].*?)",
+          "to": "#### $2$3$4$5 $9 című könyvében írja:\\n\\n$10$11",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\s+$",
+          "to": "",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß])(-\\s{1})(?!és\\s{1}|vagy\\s{1})([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß])",
+          "to": "$1$3",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\r\\n)+|\\r+|\\n+(?!(#{4}\\s.*))",
+          "to": " ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([{}[()*1-9a-zA-ZÀ-ŰØ-űø-ÿ]|[.,:;!?\"'])\\s{2,4}([{}[()'\"*1-9a-zA-ZÀ-ŰØ-űø-ÿ])",
+          "to": "$1 $2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(-\\s[['\"*A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])",
+          "to": "\\n$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\s{0,5})([…]|[.]{3})(\\s{0,4})(.*?)",
+          "to": "  \\n> ...  \\n> $4",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(#{4}\\s.*)",
+          "to": "\\n\\n$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(>\\s.*)",
+          "to": "\\n\\n$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(?<=\\s)-(?=\\s)",
+          "to": "–",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-záàäæãåééíóöőōüűžščñßðđŋħjĸłßλ]+)-\\s",
+          "to": "$1 – [EZTNEMTUDOMMIÉRTAKARTAM MERT SZAR]",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": true
+        },
+        {
+          "from": "(\"|')(-\\s)([a-zA-ZÀ-ŰØ-űø-ÿ])",
+          "to": "$1-$3",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\s—\\s",
+          "to": " – ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "^–",
+          "to": "-",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(.*[.!?'\"*)]\\s{0})\\n",
+          "to": "$1  \\n",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\s{2})([A-ZÁÉÍÓÖŐÚÜŰÆÐŊĦJŁ])",
+          "to": "\\n$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "szsz",
+          "to": "ssz",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[✅\\s.*)(>\\s.*)",
+          "to": "\\n\\n$1\\n\\n$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\n\\n(^>\\s)([…]|[.]{3})(\\s{0,4})(.*?\\n>\\s{0,4})\\n(.)",
+          "to": "> ...  \\n> $5",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\n\\n(^>\\s)([…]|[.]{3})(\\s{0,4})(.*?)",
+          "to": "> ...  ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^-\\s.*[?!.'\"*])\\s{0,1}",
+          "to": "$1  ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\(1[.]\\s(.)",
+          "to": "(l. $1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([.])([a-zžáàäæãééíóöőüűčñßðđŋħjĸłß])",
+          "to": "'$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "('|❜|\\.|,)([a-zA-ZÀ-ŰØ-űø-ÿ].+?)('|❜)",
+          "to": "\"$2\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ])\\s[1]\\s([a-zA-ZÀ-ŰØ-űø-ÿ]|[;,.?!-]|\\s|)",
+          "to": "$1l$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": true
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ])[1]\\s([a-zA-ZÀ-ŰØ-űø-ÿ]|[;,.?!-]|\\s|)",
+          "to": "$1l$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": true
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ])\\s[1]([a-zA-ZÀ-ŰØ-űø-ÿ]|[;,.?!-]|\\s|)",
+          "to": "$1l$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": true
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ])[1]([a-zA-ZÀ-ŰØ-űø-ÿ]|[;,.?!-]|\\s|)",
+          "to": "$1l$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": true
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ])(\\s|)(1)(\\s|)(1)(\\s|[a-zA-ZÀ-ŰØ-űø-ÿ]|[.,;?!-])",
+          "to": "$1$2l$4l$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "Scb([a-zA-ZÀ-ŰØ-űø-ÿ])",
+          "to": "Sch$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "íí",
+          "to": "ű",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-zA-ZÀ-ŰØ-űø-ÿ]+?)\\s(,)",
+          "to": "$1$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(,)([a-zA-ZÀ-ŰØ-űø-ÿ]+)",
+          "to": "$1 $2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([0-9]+)—([0-9]+)",
+          "to": "$1-$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": false,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "LexicalItems@GötzAnnotations",
+      "rules": [
+        {
+          "from": "”",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "[T][E][S][Z]",
+          "to": "TeSz",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "[vy]ö[.]",
+          "to": "vesd össze",
+          "caseInsensitive": true,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-záàäæãåééíóöőōüűžščñßðđŋħjĸłßλ]+)([.]\\s)([a-záàäæãåééíóöőōüűžščñßðđŋħjĸłßλ]+)",
+          "to": "$1$2`$3`",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": true
+        },
+        {
+          "from": "([a-záàäæãåééíóöőōüűžščñßðđŋħjĸłßλ]+)(\\s)(\"[a-záàäæãåééíóöőōüűžščñßðđŋħjĸłßλ]+\")",
+          "to": "`$1`$2$3",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": true
+        },
+        {
+          "from": "(^[0-9]{1,2})([.,]\\s)",
+          "to": "\\n\\n$1\\. ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Götz-Prefixing",
+      "rules": [
+        {
+          "from": "^[0-9]{1,2}\\\\[.]\\s",
+          "to": "\\n#### Götz László Keleten kél a Nap...\\n\\n...című könyvének 552. oldalától találjuk az iráninak megállapított jövevényszavainkat és [[Harmatta János]] felé szóló kritikáját (kiemelendő, hogy a valódi ékírásos szumér szavakkal szemben az ősiráni és finnugor alakok csak becsillagozott hipotetikus alakok):   \\n> ",
+          "caseInsensitive": true,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Change String in Single or Double Asteriks to String in Backticks",
+      "rules": [
+        {
+          "from": "(_|\\*{1,2})([[a-zA-ZÀ-ŰØ-áàäæãééíóöőüűčžñßðđŋħjĸłß]+)(_|\\*{1,2})",
+          "to": "`$2`",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Remove Backticks Around Single-Word Strings",
+      "rules": [
+        {
+          "from": "`([[a-zA-ZÀ-ŰØ-áàäæãééíóöőüűčžñßðđŋħjĸłß]+)`",
+          "to": "$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "String in DoubleSquareBrackets to String in Bold",
+      "rules": [
+        {
+          "from": "\\[\\[([\\d\\D]*?)\\]\\]",
+          "to": "**$1**",
+          "caseInsensitive": true,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "iFrameify",
+      "rules": [
+        {
+          "from": "(http.*?)",
+          "to": "<iframe width=\"700\" height=\"900\" src=\"$1\"></iframe>",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Remove Superfluous Empty Line",
+      "rules": [
+        {
+          "from": "^\\s*\\n\\n",
+          "to": "\\n",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "%%~~Make Rubbish Invisible~~%%",
+      "rules": [
+        {
+          "from": "(.*)",
+          "to": "%%~~$1~~%%",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Spaces before and after Equation Marks",
+      "rules": [
+        {
+          "from": "([{}[()*\"'`!1-9a-zA-ZÀ-ŰØ-űø-ÿ]+)=([{}[()*\"'`!1-9a-zA-ZÀ-ŰØ-űø-ÿ]+)",
+          "to": "$1 = $2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Bring to Next Line (change delimiter on demand)",
+      "rules": [
+        {
+          "from": "(,\\s)([a-zA-ZÀ-ŰØ-űø-ÿ]+)",
+          "to": ",  \\n$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Quotation Marks to Backticks",
+      "rules": [
+        {
+          "from": "(“|\"|''|,,|‘‘|’’|''|”)",
+          "to": "`",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Backtickize - String in Quotation Marks to String in Backticks",
+      "rules": [
+        {
+          "from": "(“|\"|''|,,|„|‘‘|''|”|')(.*?)(“|\"|''|,,|‘‘|''|”|')",
+          "to": "`$2`",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Embedded Image Wikilink Refs TO Markdown Refs",
+      "rules": [
+        {
+          "from": "!(\\[\\[)(.*?)([.])(png|jpg|jpeg|bmp|gif|tiff|anyotherimagetype)(\\]\\])",
+          "to": "![](assets/$2$3$4)",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Custom Dictionary Commander Helper",
+      "rules": [
+        {
+          "from": "(.*?#)(.*)",
+          "to": "$2",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "LinkifywithAlias",
+      "rules": [
+        {
+          "from": "(.+)",
+          "to": "[[$1|$1]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Numbers Brought to New Line with Dot Escaped",
+      "rules": [
+        {
+          "from": "([0-9]{1,2})([.,]\\s)",
+          "to": "\\n$1\\. ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Remove Wikilinks",
+      "rules": [
+        {
+          "from": "\\[\\[(.*)\\]\\]",
+          "to": "$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Remove Alias Wikilinks",
+      "rules": [
+        {
+          "from": "\\[\\[(.*?)(\\|)(.*?)\\]\\]",
+          "to": "$3",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\[\\[(.*)\\]\\]",
+          "to": "$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "ZoteroHeadingPagesRevamp",
+      "rules": [
+        {
+          "from": "(#{4}\\s)(.*)(:)\\n\\n(>.*)(\\(\\[Lásd\\s)([0-9]{1,4}\\.)(\\sold\\.)(\\]\\(zotero.*\\))(\\))",
+          "to": "$2 ([$6 oldalon$8):  \\n$4 ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "ZoteroHeadingPagesRevamp2",
+      "rules": [
+        {
+          "from": "(#{4}\\s)(.*)(könyvében)(\\s)(.*)(:)\\n\\n(>.*)(\\(\\[Lásd\\s)([0-9]{1,4}\\.)(\\sold\\.)(\\]\\(zotero.*\\))(\\))",
+          "to": "$2könyvének$4[$9 oldalán$11 $5:  \\n$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(#{4}\\s)(.*)(\\.{3})\\n\\n(\\.{3})(.*?)(\\s)(könyvében)(.*?)(:)\\n(>.*)(\\(\\[Lásd\\s)([0-9]{1,4}\\.)(\\sold\\.)(\\]\\(zotero.*\\))(\\))",
+          "to": "$2 $5 könyvének [$12 oldalán$14 írja:  \\n$10",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "RemoveSpacesToMakeaWord",
+      "rules": [
+        {
+          "from": "\\s",
+          "to": "",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "TemplaterTrimSpaces",
+      "rules": [
+        {
+          "from": "---\\ndate.*?ed.*\\n---\\n",
+          "to": "",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "^\\s{5,10}-{3}\\n",
+          "to": "---\\n",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^\\s{1,2}$)",
+          "to": "",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "AliasforTitle&Heading_lowercase",
+      "rules": [
+        {
+          "from": "(\\[\\[)(.*?)(#)([A])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|a$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([Á])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|á$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([B])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|b$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([C])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|c$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([D])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|d$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([E])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|e$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([É])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|é$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([F])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|f$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([G])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|g$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([H])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|h$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([I])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|i$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([Í])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|í$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([J])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|j$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([K])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|k$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([L])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|l$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([M])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|m$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([N])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|n$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([O])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|o$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([Ó])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|ó$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([Ö])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|ö$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([Ő])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|ő$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([P])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|p$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([Q])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|q$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([R])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|r$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([S])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|s$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([T])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|t$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([U])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|u$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([Ú])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|ú$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([Ü])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|ü$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([Ű])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|ű$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([V])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|v$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([W])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|w$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([X])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|x$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([Y])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|y$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(#)([Z])(.*?)(\\]\\])",
+          "to": "$1$2$3$4$5|z$5$6",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "A>Á in alias",
+      "rules": [
+        {
+          "from": "(\\[\\[)(.*?)(a)(\\]\\])",
+          "to": "$1$2$3|$2á$4",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(.*?)(\\|)(.*?)(\\|)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$7$8$9$10",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(A)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3a$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Á)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3á$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(B)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3b$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(C)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3c$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(D)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3d$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(E)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3e$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(É)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3é$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(F)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3f$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(G)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3g$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(H)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3h$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(I)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3i$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Í)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3í$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(J)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3j$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(K)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3k$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(L)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3l$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(M)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3m$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(N)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3n$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(O)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3o$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ó)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ó$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ö)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ö$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ő)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ő$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(P)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3p$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Q)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3q$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(R)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3r$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(S)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3s$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(T)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3t$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(U)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3u$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ú)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ú$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ü)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ü$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ű)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ű$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(V)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3v$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(W)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3w$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(X)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3x$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Y)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3y$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Z)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3z$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "E>É in alias",
+      "rules": [
+        {
+          "from": "(\\[\\[)(.*?)(e)(\\]\\])",
+          "to": "$1$2$3|$2é$4",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(.*?)(\\|)(.*?)(\\|)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$7$8$9$10",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(A)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3a$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(A)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3a$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Á)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3á$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(B)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3b$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(C)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3c$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(D)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3d$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(E)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3e$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(É)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3é$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(F)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3f$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(G)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3g$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(H)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3h$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(I)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3i$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Í)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3í$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(J)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3j$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(K)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3k$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(L)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3l$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(M)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3m$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(N)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3n$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(O)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3o$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ó)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ó$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ö)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ö$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ő)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ő$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(P)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3p$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Q)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3q$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(R)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3r$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(S)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3s$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(T)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3t$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(U)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3u$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ú)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ú$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ü)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ü$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Ű)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3ű$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(V)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3v$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(W)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3w$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(X)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3x$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Y)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3y$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(Z)(.*?)(á|é)(\\]\\])",
+          "to": "$1$2$3z$5$6$7",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Mese alias",
+      "rules": [
+        {
+          "from": "(\\[\\[)(.*?mes)(e)(\\]\\])",
+          "to": "$1$2$3|$2é$4",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "AliasforTitle&Heading_upper_stays",
+      "rules": [
+        {
+          "from": "(\\[\\[)(.*?)(#)(.*?)(\\]\\])",
+          "to": "$1$2$3$4|$4$5",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "AliasRemoval",
+      "rules": [
+        {
+          "from": "(\\[\\[)(.*?)(\\|)(.*?)(\\]\\])",
+          "to": "$1$2$5",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Add2VConlyalias",
+      "rules": [
+        {
+          "from": "(^.*?)(#)([A])(.*)",
+          "to": "\\n[[$1$2$3$4|a$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([Á])(.*)",
+          "to": "\\n[[$1$2$3$4|á$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([B])(.*)",
+          "to": "\\n[[$1$2$3$4|b$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([C])(.*)",
+          "to": "\\n[[$1$2$3$4|c$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([D])(.*)",
+          "to": "\\n[[$1$2$3$4|d$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([E])(.*)",
+          "to": "\\n[[$1$2$3$4|e$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([É])(.*)",
+          "to": "\\n[[$1$2$3$4|é$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([F])(.*)",
+          "to": "\\n[[$1$2$3$4|f$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([G])(.*)",
+          "to": "\\n[[$1$2$3$4|g$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([H])(.*)",
+          "to": "\\n[[$1$2$3$4|h$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([I])(.*)",
+          "to": "\\n[[$1$2$3$4|i$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([Í])(.*)",
+          "to": "\\n[[$1$2$3$4|í$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([J])(.*)",
+          "to": "\\n[[$1$2$3$4|j$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([K])(.*)",
+          "to": "\\n[[$1$2$3$4|k$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([L])(.*)",
+          "to": "\\n[[$1$2$3$4|l$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([M])(.*)",
+          "to": "\\n[[$1$2$3$4|m$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([N])(.*)",
+          "to": "\\n[[$1$2$3$4|n$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([O])(.*)",
+          "to": "\\n[[$1$2$3$4|o$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([Ó])(.*)",
+          "to": "\\n[[$1$2$3$4|ó$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([Ö])(.*)",
+          "to": "\\n[[$1$2$3$4|ö$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([Ő])(.*)",
+          "to": "\\n[[$1$2$3$4|ő$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([P])(.*)",
+          "to": "\\n[[$1$2$3$4|p$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([Q])(.*)",
+          "to": "\\n[[$1$2$3$4|q$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([R])(.*)",
+          "to": "\\n[[$1$2$3$4|r$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([S])(.*)",
+          "to": "\\n[[$1$2$3$4|s$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([T])(.*)",
+          "to": "\\n[[$1$2$3$4|t$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([U])(.*)",
+          "to": "\\n[[$1$2$3$4|u$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([Ú])(.*)",
+          "to": "\\n[[$1$2$3$4|ú$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([Ü])(.*)",
+          "to": "\\n[[$1$2$3$4|ü$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([Ű])(.*)",
+          "to": "\\n[[$1$2$3$4|ű$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([V])(.*)",
+          "to": "\\n[[$1$2$3$4|v$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([W])(.*)",
+          "to": "\\n[[$1$2$3$4|w$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([X])(.*)",
+          "to": "\\n[[$1$2$3$4|x$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([Y])(.*)",
+          "to": "\\n[[$1$2$3$4|y$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^.*?)(#)([Z])(.*)",
+          "to": "\\n[[$1$2$3$4|z$4]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "LinterHelper1",
+      "rules": [
+        {
+          "from": "^topic:",
+          "to": "alias2:",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "^topic_alternative:",
+          "to": "alias3:",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "LinterHelper2",
+      "rules": [
+        {
+          "from": "alias[0-9]:\\n",
+          "to": "",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(  - .*?)(\\s\\(.*?\\))",
+          "to": "$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Formatting Done",
+      "rules": [
+        {
+          "from": "unformatted⚪",
+          "to": "formatted🟢",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "formatlooksokayonsmallerfiles",
+          "to": "formatted🟢",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Assetsize Wikilinks",
+      "rules": [
+        {
+          "from": "(!\\[\\[)(.*?_image[0-9]{1,3}\\.)(jpg|jpeg|gif|png|bmp|webp|tiff)(\\]\\])",
+          "to": "$1assets/$2$3$4",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "DG Upload Status",
+      "rules": [
+        {
+          "from": "dg_upload_status:\\sdown(\\s{0,2})\\n",
+          "to": "dg_upload_status: 🟢\\n",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "title:\\s.*\\n---",
+          "to": "---",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(:\\strue)(\\s{2})\\n",
+          "to": "$1\\n",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(🟢)(\\s{2})\\n",
+          "to": "$1\\n",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(created:[\\d\\D]*?[0-9]{2}:[0-9]{2})(\\s{2})\\n",
+          "to": "$1\\n",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(updated:[\\d\\D]*?[0-9]{2}:[0-9]{2})(\\s{2})\\n",
+          "to": "$1\\n",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(date\\screated:[\\d\\D]*?[0-9]{2}-[0-9]{2})(\\s{2})\\n",
+          "to": "$1\\n",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(date\\supdated:[\\d\\D]*?[0-9]{2}-[0-9]{2})(\\s{2})\\n",
+          "to": "$1\\n",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(^aliases:\\n\\s{2}-\\s.*?)(\\s{2})\\n",
+          "to": "$1\\n",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "FootNoteLineBreaks after Linter Footnote reindexing",
+      "rules": [
+        {
+          "from": "(?!^\\[\\^1\\]:.*?)(^\\[\\^[0-9]{1,2}\\].*?)",
+          "to": "\\n$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": false,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    }
+  ],
+  "filterString": "",
+  "commandFilterString": "",
+  "commands": [
+    {
+      "name": "Backtickize - String in Quotation Marks to String in Backticks",
+      "icon": "bluetooth",
+      "patternFilter": "Backtickize - String in Quotation Marks to String in Backticks",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "ZoteroInt & OCR Cleanup",
+      "icon": "search",
+      "patternFilter": "ZoteroInt & OCR Cleanup",
+      "selection": true,
+      "lines": false,
+      "document": true,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Embedded Image Wikilink Refs TO Markdown Refs",
+      "icon": "link-2off",
+      "patternFilter": "Embedded Image Wikilink Refs TO Markdown Refs",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Custom Dictionary Commander Helper",
+      "icon": "search",
+      "patternFilter": "Custom Dictionary Commander Helper",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "LinkifywithAlias",
+      "icon": "align-horizontal-justify-center",
+      "patternFilter": "LinkifywithAlias",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Numbers Brought to New Line with Dot Escaped",
+      "icon": "search",
+      "patternFilter": "Numbers Brought to New Line with Dot Escaped",
+      "selection": true,
+      "lines": false,
+      "document": true,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Remove Wikilinks",
+      "icon": "search",
+      "patternFilter": "Remove Wikilinks",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Remove Backticks Around Single-Word Strings",
+      "icon": "search",
+      "patternFilter": "Remove Backticks Around Single-Word Strings",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Change Single-Word String in Single or Double Asteriks to String in Backticks",
+      "icon": "star",
+      "patternFilter": "Change String in Single or Double Asteriks to String in Backticks",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Remove Alias Wikilinks",
+      "icon": "search",
+      "patternFilter": "Remove Alias Wikilinks",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "ZoteroHeadingPagesRevamp (https://regex101.com/r/WThA4A/1)",
+      "icon": "search",
+      "patternFilter": "ZoteroHeadingPagesRevamp",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "RemoveSpacesToMakeaWord",
+      "icon": "bookmark-minus",
+      "patternFilter": "RemoveSpacesToMakeaWord",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "TemplaterTrimSpaces",
+      "icon": "search",
+      "patternFilter": "TemplaterTrimSpaces",
+      "selection": false,
+      "lines": false,
+      "document": true,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "OCR Cleanup Normal",
+      "icon": "search",
+      "patternFilter": "OCR Cleanup Normal",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "iFrameify",
+      "icon": "frame",
+      "patternFilter": "iFrameify",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "AliasforTitle&Heading_lowercase",
+      "icon": "links-going-out",
+      "patternFilter": "AliasforTitle&Heading_lowercase",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "A>Á in alias",
+      "icon": "apple",
+      "patternFilter": "A>Á in alias",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "E>É in alias",
+      "icon": "egg",
+      "patternFilter": "E>É in alias",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "ZoteroHeadingPagesRevamp2",
+      "icon": "search",
+      "patternFilter": "ZoteroHeadingPagesRevamp2",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Mese alias",
+      "icon": "image-plus",
+      "patternFilter": "Mese alias",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "AliasforTitle&Heading_upper_stays",
+      "icon": "vertical-split",
+      "patternFilter": "AliasforTitle&Heading_upper_stays",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Remove Alias (WIkilink stays)",
+      "icon": "align-center-horizontal",
+      "patternFilter": "AliasRemoval",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Add2VConlyalias",
+      "icon": "search",
+      "patternFilter": "Add2VConlyalias",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "LinterHelper1",
+      "icon": "search",
+      "patternFilter": "LinterHelper1",
+      "selection": false,
+      "lines": false,
+      "document": true,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "LinterHelper2",
+      "icon": "search",
+      "patternFilter": "LinterHelper2",
+      "selection": false,
+      "lines": false,
+      "document": true,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "🟢 Formatting Done",
+      "icon": "search",
+      "patternFilter": "Formatting Done",
+      "selection": false,
+      "lines": false,
+      "document": true,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Assetsize Wikilinks",
+      "icon": "forward-arrow",
+      "patternFilter": "Assetsize Wikilinks",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "DG Upload Status 🟢",
+      "icon": "search",
+      "patternFilter": "DG Upload Status",
+      "selection": false,
+      "lines": false,
+      "document": true,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "FootNoteLineBreaks after Linter Footnote reindexing",
+      "icon": "search",
+      "patternFilter": "FootNoteLineBreaks after Linter Footnote reindexing",
+      "selection": false,
+      "lines": false,
+      "document": true,
+      "clipboard": false,
+      "clipboardLines": false
+    }
+  ],
+  "apiVersion": 6,
+  "defaultCursorRegexEnd": "^",
+  "defaultCursorRegexStart": "$"
+}

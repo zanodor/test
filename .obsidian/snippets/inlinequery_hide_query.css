@@ -1,0 +1,26 @@
+/* Embedded searches */
+.internal-query {
+    background-color: var(--background-tertiary);
+    border-radius: 5px;
+}
+
+.markdown-preview-view .internal-query.is-embed .internal-query-header {
+    justify-content: center;
+}
+
+/* Hide the query text */
+.internal-query-header-title {
+    display: none;
+}
+
+/* Hide the query header icon */
+.markdown-preview-view .internal-query.is-embed .internal-query-header-icon {
+    display: none;
+}
+
+/* Force embedded searches to fill the height of their results, rather than be scrollable */
+.markdown-preview-view .internal-query.is-embed .search-results-children {
+    height: fit-content;
+    min-height: fit-content;
+    max-height: none;
+}

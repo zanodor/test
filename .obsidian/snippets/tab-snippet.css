@@ -1,0 +1,13 @@
+.workspace .mod-root .workspace-tab-header {
+    width: 0;
+    min-width: 130px;
+    max-width: 200px;
+}
+
+.workspace-tab-header-new-tab {
+    margin-left: 8px;
+}
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+  min-width: initial;
+}

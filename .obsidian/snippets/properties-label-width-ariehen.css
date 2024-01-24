@@ -1,0 +1,4 @@
+/* adjust property label width - default value is 9em */
+body {
+    --metadata-label-width: 15em;
+}

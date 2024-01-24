@@ -1,0 +1,551 @@
+{
+  "patterns": [
+    {
+      "name": "LexicalItems@GötzAnnotations",
+      "rules": [
+        {
+          "from": "”",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "[T][E][S][Z]",
+          "to": "TeSz",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "[vy]ö[.]",
+          "to": "vesd össze",
+          "caseInsensitive": true,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-záàäæãåééíóöőōüűžščñßðđŋħjĸłßλ]+)([.]\\s)([a-záàäæãåééíóöőōüűžščñßðđŋħjĸłßλ]+)",
+          "to": "$1$2`$3`",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": true
+        },
+        {
+          "from": "([a-záàäæãåééíóöőōüűžščñßðđŋħjĸłßλ]+)(\\s)(\"[a-záàäæãåééíóöőōüűžščñßðđŋħjĸłßλ]+\")",
+          "to": "`$1`$2$3",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": true
+        },
+        {
+          "from": "(^[0-9]{1,2})([.,]\\s)",
+          "to": "\\n\\n$1\\. ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Götz-Prefixing",
+      "rules": [
+        {
+          "from": "^[0-9]{1,2}\\\\[.]\\s",
+          "to": "\\n#### Götz László Keleten kél a Nap...\\n\\n...című könyvének 552. oldalától találjuk az iráninak megállapított jövevényszavainkat és [[Harmatta János]] felé szóló kritikáját (kiemelendő, hogy a valódi ékírásos szumér szavakkal szemben az ősiráni és finnugor alakok csak becsillagozott hipotetikus alakok):   \\n> ",
+          "caseInsensitive": true,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Change Single-Word String in Single Asteriks to String in Backticks",
+      "rules": [
+        {
+          "from": "(_|\\*)([[a-zA-ZÀ-ŰØ-áàäæãééíóöőüűčžñßðđŋħjĸłß]+)(_|\\*)",
+          "to": "`$2`",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Remove Backticks Around Single-Word Strings",
+      "rules": [
+        {
+          "from": "`([[a-zA-ZÀ-ŰØ-áàäæãééíóöőüűčžñßðđŋħjĸłß]+)`",
+          "to": "$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "String in DoubleSquareBrackets to String in Bold",
+      "rules": [
+        {
+          "from": "\\[\\[([\\d\\D]*?)\\]\\]",
+          "to": "**$1**",
+          "caseInsensitive": true,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "iFrameify",
+      "rules": [
+        {
+          "from": "\\((http.*?)\\)",
+          "to": "<iframe width=\"700\" height=\"900\" src=\"$1\"></iframe>",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Remove Superfluous Empty Line",
+      "rules": [
+        {
+          "from": "^\\s*\\n\\n",
+          "to": "\\n",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "OCR Cleanup - Remove all line breaks, carriage returns and tabs",
+      "rules": [
+        {
+          "from": ",,",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "„",
+          "to": "\"",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "õ",
+          "to": "ő",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "Õ",
+          "to": "Ő",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(-\\n)",
+          "to": "",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "(\\r\\n)+|\\r+|\\n+|\\t+",
+          "to": " ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\s-\\s",
+          "to": " – ",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "([a-záàäæãåééíóöőōüűžščñßðđŋħjĸłßλ]+)-\\s",
+          "to": "$1 – ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": false,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "%%~~Make Rubbish Invisible~~%%",
+      "rules": [
+        {
+          "from": "(.*)",
+          "to": "%%~~$1~~%%",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Spaces before and after Equation Marks",
+      "rules": [
+        {
+          "from": "([{}[()*\"'`!1-9a-zA-ZÀ-ŰØ-űø-ÿ]+)=([{}[()*\"'`!1-9a-zA-ZÀ-ŰØ-űø-ÿ]+)",
+          "to": "$1 = $2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Bring to Next Line (change delimiter on demand)",
+      "rules": [
+        {
+          "from": "(,\\s)([a-zA-ZÀ-ŰØ-űø-ÿ]+)",
+          "to": ",  \\n$2",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Quotation Marks to Backticks",
+      "rules": [
+        {
+          "from": "(\"|''|,,|‘‘|’’|''|”)",
+          "to": "`",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Backtickize - String in Quotation Marks to String in Backticks",
+      "rules": [
+        {
+          "from": "(\"|''|,,|‘‘|''|”)(.*?)(\"|''|,,|‘‘|''|”)",
+          "to": "`$2`",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Embedded Image Wikilink Refs TO Markdown Refs",
+      "rules": [
+        {
+          "from": "!(\\[\\[)(.*?)([.])(png|jpg|jpeg|bmp|gif|tiff|anyotherimagetype)(\\]\\])",
+          "to": "![](assets/$2$3$4)",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Custom Dictionary Commander Helper",
+      "rules": [
+        {
+          "from": "(.*?#)(.*)",
+          "to": "$2",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "LinkifywithAlias",
+      "rules": [
+        {
+          "from": "(.+)",
+          "to": "[[$1|$1]]",
+          "caseInsensitive": false,
+          "global": false,
+          "multiline": false,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Numbers Brought to New Line with Dot Escaped",
+      "rules": [
+        {
+          "from": "([0-9]{1,2})([.,]\\s)",
+          "to": "\\n$1\\. ",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": true,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Remove Wikilinks",
+      "rules": [
+        {
+          "from": "\\[\\[(.*)\\]\\]",
+          "to": "$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": false,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    },
+    {
+      "name": "Remove Alias Wikilinks",
+      "rules": [
+        {
+          "from": "\\[\\[(.*?)(\\|)(.*?)\\]\\]",
+          "to": "$3",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        },
+        {
+          "from": "\\[\\[(.*)\\]\\]",
+          "to": "$1",
+          "caseInsensitive": false,
+          "global": true,
+          "multiline": true,
+          "sticky": false,
+          "disabled": false
+        }
+      ],
+      "collapsed": false,
+      "cursorRegexStart": "$",
+      "cursorRegexEnd": "^"
+    }
+  ],
+  "filterString": "clean",
+  "commandFilterString": "",
+  "commands": [
+    {
+      "name": "Backtickize - String in Quotation Marks to String in Backticks",
+      "icon": "search",
+      "patternFilter": "Backtickize - String in Quotation Marks to String in Backticks",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "OCR Cleanup - Remove all line break",
+      "icon": "search",
+      "patternFilter": "OCR Cleanup - Remove all line break",
+      "selection": true,
+      "lines": false,
+      "document": true,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Embedded Image Wikilink Refs TO Markdown Refs",
+      "icon": "search",
+      "patternFilter": "Embedded Image Wikilink Refs TO Markdown Refs",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Custom Dictionary Commander Helper",
+      "icon": "search",
+      "patternFilter": "Custom Dictionary Commander Helper",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "LinkifywithAlias",
+      "icon": "search",
+      "patternFilter": "LinkifywithAlias",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Numbers Brought to New Line with Dot Escaped",
+      "icon": "search",
+      "patternFilter": "Numbers Brought to New Line with Dot Escaped",
+      "selection": true,
+      "lines": false,
+      "document": true,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Remove Wikilinks",
+      "icon": "search",
+      "patternFilter": "Remove Wikilinks",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Remove Backticks Around Single-Word Strings",
+      "icon": "search",
+      "patternFilter": "Remove Backticks Around Single-Word Strings",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Change Single-Word String in Single Asteriks to String in Backticks",
+      "icon": "search",
+      "patternFilter": "Change Single-Word String in Single Asteriks to String in Backticks",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    },
+    {
+      "name": "Remove Alias Wikilinks",
+      "icon": "search",
+      "patternFilter": "Remove Alias Wikilinks",
+      "selection": true,
+      "lines": false,
+      "document": false,
+      "clipboard": false,
+      "clipboardLines": false
+    }
+  ],
+  "apiVersion": 6,
+  "defaultCursorRegexEnd": "^",
+  "defaultCursorRegexStart": "$"
+}

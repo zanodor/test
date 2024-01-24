@@ -1,0 +1,151 @@
+{
+  "strategy": "default",
+  "cedictPath": "./cedict_ts.u8",
+  "matchStrategy": "prefix",
+  "fuzzyMatch": true,
+  "minFuzzyMatchScore": 0.1,
+  "matchingWithoutEmoji": true,
+  "treatAccentDiacriticsAsAlphabeticCharacters": true,
+  "maxNumberOfSuggestions": 9,
+  "maxNumberOfWordsAsPhrase": 3,
+  "minNumberOfCharactersTriggered": 2,
+  "minNumberOfWordsTriggeredPhrase": 1,
+  "complementAutomatically": true,
+  "delayMilliSeconds": 20,
+  "disableSuggestionsDuringImeOn": false,
+  "insertAfterCompletion": false,
+  "firstCharactersDisableSuggestions": ":/^",
+  "patternsToSuppressTrigger": [
+    "^~~~.*",
+    "^```.*"
+  ],
+  "noAutoFocusUntilCycle": false,
+  "showMatchStrategy": false,
+  "showComplementAutomatically": true,
+  "showIndexingStatus": false,
+  "descriptionOnSuggestion": "Full",
+  "hotkeys": {
+    "select": [
+      {
+        "modifiers": [],
+        "key": "Enter",
+        "hideHotkeyGuide": false
+      }
+    ],
+    "up": [
+      {
+        "modifiers": [],
+        "key": "ArrowUp",
+        "hideHotkeyGuide": false
+      },
+      {
+        "modifiers": [
+          "Shift"
+        ],
+        "key": "Tab",
+        "hideHotkeyGuide": false
+      }
+    ],
+    "down": [
+      {
+        "modifiers": [],
+        "key": "ArrowDown",
+        "hideHotkeyGuide": false
+      },
+      {
+        "modifiers": [],
+        "key": "Tab",
+        "hideHotkeyGuide": false
+      }
+    ],
+    "select 1st": [],
+    "select 2nd": [],
+    "select 3rd": [],
+    "select 4th": [],
+    "select 5th": [],
+    "select 6th": [],
+    "select 7th": [],
+    "select 8th": [],
+    "select 9th": [],
+    "open": [],
+    "completion": [],
+    "insert as text": [
+      {
+        "modifiers": [
+          "Shift"
+        ],
+        "key": "Enter",
+        "hideHotkeyGuide": false
+      }
+    ]
+  },
+  "propagateEsc": true,
+  "enableCurrentFileComplement": true,
+  "currentFileMinNumberOfCharacters": 0,
+  "onlyComplementEnglishOnCurrentFileComplement": false,
+  "enableCurrentVaultComplement": true,
+  "currentVaultMinNumberOfCharacters": 0,
+  "includeCurrentVaultPathPrefixPatterns": "TUDASTAR/",
+  "excludeCurrentVaultPathPrefixPatterns": "",
+  "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
+  "enableCustomDictionaryComplement": true,
+  "customDictionaryPaths": "/60 Dictionary/HungarianDictionary3.md",
+  "columnDelimiter": "Tab",
+  "customDictionaryWordRegexPattern": "",
+  "delimiterToHideSuggestion": "",
+  "delimiterToDivideSuggestionsForDisplayFromInsertion": "",
+  "caretLocationSymbolAfterComplement": "",
+  "displayedTextSuffix": " => ...",
+  "enableInternalLinkComplement": true,
+  "suggestInternalLinkWithAlias": true,
+  "excludeInternalLinkPathPrefixPatterns": "",
+  "updateInternalLinksOnSave": true,
+  "insertAliasTransformedFromDisplayedInternalLink": {
+    "enabled": false,
+    "beforeRegExp": "",
+    "after": ""
+  },
+  "frontMatterKeyForExclusionInternalLink": "",
+  "enableFrontMatterComplement": true,
+  "frontMatterComplementMatchStrategy": "inherit",
+  "insertCommaAfterFrontMatterCompletion": false,
+  "intelligentSuggestionPrioritization": {
+    "enabled": true,
+    "historyFilePath": "",
+    "maxDaysToKeepHistory": 30,
+    "maxNumberOfHistoryToKeep": 0
+  },
+  "disableOnMobile": false,
+  "showLogAboutPerformanceInConsole": false,
+  "selectionHistoryTree": {
+    "well": {
+      "well": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1698803976932
+        }
+      }
+    },
+    "téli napforduló": {
+      "téli napforduló": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1698804195943
+        }
+      }
+    },
+    "napforduló": {
+      "napforduló": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1698804293693
+        }
+      }
+    }
+  },
+  "useCommonPrefixCompletionOfSuggestion": false,
+  "selectSuggestionKeys": "Enter",
+  "additionalCycleThroughSuggestionsKeys": "Tab, Shift+Tab",
+  "disableUpDownKeysForCycleThroughSuggestionsKeys": true,
+  "openSourceFileKey": "None"
+}

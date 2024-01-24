@@ -1,0 +1,9 @@
+.markdown-preview-view .markdown-embed-content .markdown-rendered blockquote {
+    margin-left: -60px;
+    padding-left: 12px;
+}
+
+.internal-embed .markdown-rendered blockquote {
+    margin-left: 0px;
+    padding-left: 20px;
+}

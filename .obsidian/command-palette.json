@@ -1,0 +1,22 @@
+{
+  "pinned": [
+    "templater-obsidian:meta/templater/Alias QuickSwitcher Zanodor plus Append with InlineQueries Template.md",
+    "switcher:open",
+    "templater-obsidian:meta/templater/Insert InlineQueries Under YAML Template.md",
+    "various-complements:add-word-custom-dictionary",
+    "obsidian-copy-block-link:copy-embed-to-block",
+    "obsidian-regex-replace:obsidian-regex-replace",
+    "file-explorer:reveal-active-file",
+    "obsidian-footnotes-zanodor:insert-autonumbered-footnote",
+    "cmdr0.5.0:macro-17",
+    "obsidian-apply-patterns:apply-pattern-13-selection",
+    "obsidian-apply-patterns:apply-pattern-18-selection",
+    "templater-obsidian:meta/templater/Insert Inline Query for English Text Content Below YAML block Template.md",
+    "templater-obsidian:meta/templater/Move Text and Embed Back Template by AlanG.md",
+    "cmdr0.5.0:macro-19",
+    "editor:fold-all",
+    "editor:unfold-all",
+    "workspaces:open-modal",
+    "editor:insert-callout"
+  ]
+}

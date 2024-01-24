@@ -1,0 +1,7 @@
+/* Sidenote callout */
+.callout[data-callout="sidenote"] {
+    float: right;
+    max-width: 320px;
+    --callout-color: 0, 0, 240;
+    --callout-icon: lucide-info;
+}

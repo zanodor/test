@@ -1,0 +1,28 @@
+{
+  "targetAttributes": [
+    "status"
+  ],
+  "targetTags": true,
+  "getFromInlineField": false,
+  "enableTabHeader": true,
+  "activateSnippet": true,
+  "enableEditor": false,
+  "enableFileList": true,
+  "enableBacklinks": true,
+  "enableQuickSwitcher": true,
+  "enableSuggestor": false,
+  "selectors": [
+    {
+      "type": "attribute",
+      "name": "status",
+      "value": "dg_uploaded",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "9381-4194",
+      "selectText": false,
+      "selectAppend": false,
+      "selectPrepend": true,
+      "selectBackground": false
+    }
+  ]
+}

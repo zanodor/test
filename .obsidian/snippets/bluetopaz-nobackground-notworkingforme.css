@@ -1,0 +1,4 @@
+.workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content:not([data-type="outline"])::before {
+  display: none;
+  position: unset;
+}

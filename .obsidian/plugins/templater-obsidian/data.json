@@ -1,0 +1,84 @@
+{
+  "command_timeout": 10,
+  "templates_folder": "meta/templater",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": true,
+  "shell_path": "",
+  "user_scripts_folder": "meta/javascript",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "pages",
+      "template": "meta/templater/Meta Template Picker.md"
+    },
+    {
+      "folder": "20 Periodic/21 Daily Notes",
+      "template": "meta/templater/Daily Note Template.md"
+    },
+    {
+      "folder": "20 Periodic/22 Weekly Review",
+      "template": "meta/templater/Weekly Review Template.md"
+    },
+    {
+      "folder": "20 Periodic/23 Monthly Review",
+      "template": "meta/templater/Monthly Review Template.md"
+    },
+    {
+      "folder": "999 Computerese",
+      "template": "meta/templater/Computerese Template.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": true,
+  "enabled_templates_hotkeys": [
+    "meta/templater/Alias Template.md",
+    "meta/templater/Apply Patterns - FixWord (RemoveSpacestoMakeaWord&Conver1tol) Template.md",
+    "meta/templater/Append HungarianDictionary3 Template.md",
+    "meta/templater/Apply Patterns - Make Rubbish Invisible.md",
+    "meta/templater/extract research note from selection.md",
+    "meta/templater/extract bibliography task from selection.md",
+    "meta/templater/Alias QuickSwitcher Zanodor plus Append with InlineQueries Template.md",
+    "meta/templater/Move Text and Embed Back Template by AlanG.md",
+    "meta/templater/Insert InlineQueries Under YAML Template.md",
+    "meta/templater/Insert Inline Query for English Text Content Below YAML block Template.md",
+    "meta/templater/DG created and updated Netlify Templater snippet.md",
+    "meta/templater/DG created and updated Templater snippet.md",
+    "meta/templater/Date Modified Updater Template.md",
+    "meta/templater/DG created and updated no publish Templater snippet.md",
+    "meta/templater/Insert Translation under Separator Template.md",
+    "meta/templater/Transform author and material template PC.md",
+    "meta/templater/Transform author and material template Mobile Case I.md",
+    "meta/templater/Selection to Uppercase Template.md",
+    "meta/templater/Selection to Lowercase Template.md",
+    "meta/templater/Clipboard aggregator Template.md",
+    "meta/templater/Go to First Line Template.md",
+    "meta/templater/Go to Last Line Template.md",
+    "meta/templater/Dg-publish false Template.md",
+    "meta/templater/Freeze DataView Query Template.md",
+    "meta/templater/Bake Query Template.md",
+    "meta/templater/Insert In- and Outlinks Table Under YAML Template Slower with Common Links.md",
+    "meta/templater/Insert In- and Outlinks Table Under YAML Template Faster.md",
+    "meta/templater/Comment Out Text with Wikilinks and Add Frontmatter Property Template.md",
+    "meta/templater/DanglingLinkCommentedOut Property Maker Template.md",
+    "meta/templater/Paste Army Knife Reworked Template.md",
+    "meta/templater/Paste Army Knife Reworked for Mobile Template.md",
+    "meta/templater/Query Paragraphs Based on Searchterm with User Interaction Template.md",
+    "meta/templater/Swiss Army Knife Template.md",
+    "meta/templater/SwishArmyKnife (Alter) Template.md",
+    "meta/templater/Omnivore Image Fix Template.md",
+    "meta/templater/User-inputted regex search in current file Template.md"
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "enable_ribbon_icon": true,
+  "template_folder": "meta/templater/",
+  "empty_file_template": "meta/templater/Default Note Template"
+}
