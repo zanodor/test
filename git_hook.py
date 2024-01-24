@@ -39,4 +39,4 @@ subprocess.run("git add -A && git commit -m 'Message'",
                 shell=True)
 
 subprocess.run("git checkout main",
-                shell=True)#
+                shell=True)
