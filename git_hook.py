@@ -5,21 +5,26 @@ import subprocess
 from pathlib import Path
 
 """
+
+
+
 limitation:
 process all filenames with dash -> space   *-*.md
+
 https://forum.obsidian.md/t/github-wiki-kinda-works-to-host-the-wiki/2980
 """
 
-branch = subprocess.check_output("git rev-parse --abbrev-ref HEAD", shell=True)
+branch = subprocess.check_output("git rev-parse --abbrev-ref HEAD",
+                                 shell=True)
 
-if branch != b"master\n":
+if branch == b"master\n":
     sys.exit(0)
 
-header, *filenames = subprocess.check_output(
-    "git log -1 --stat --oneline --name-only", shell=True
-).splitlines()
+header, *filenames = subprocess.check_output("git log -1 --stat --oneline --name-only",
+                                              shell=True).splitlines()
 
-subprocess.run("git checkout master && git merge --strategy-option theirs main", shell=True)
+subprocess.run("git checkout master&&git merge --strategy-option theirs main",
+                shell=True)
 
 files = [Path(f.decode()) for f in filenames if f.endswith(b".md")]
 
@@ -30,6 +35,8 @@ for file in files:
     if ntext != text:
         file.write_text(ntext)
 
-subprocess.run("git add -A && git commit -m 'Message'", shell=True)
+subprocess.run("git add -A && git commit -m 'Message'",
+                shell=True)
 
-subprocess.run("git checkout main", shell=True)
+subprocess.run("git checkout main",
+                shell=True)#
