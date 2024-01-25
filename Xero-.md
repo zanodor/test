@@ -19,4 +19,4 @@ ghrepoURL:
 
 # Xero-
 
-Száraz(ság) jelentésű görög eredetű előtag, ahol `xēros` = száraz, és [[Száraz|száraz]] szavunkkal egyező.  
+Száraz(ság) jelentésű görög eredetű előtag, ahol `xēros` = száraz, és [[száraz|Száraz]] szavunkkal egyező.  

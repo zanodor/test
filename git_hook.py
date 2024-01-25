@@ -5,38 +5,50 @@ import subprocess
 from pathlib import Path
 
 """
-
-
-
 limitation:
 process all filenames with dash -> space   *-*.md
 
 https://forum.obsidian.md/t/github-wiki-kinda-works-to-host-the-wiki/2980
 """
 
-branch = subprocess.check_output("git rev-parse --abbrev-ref HEAD",
-                                 shell=True)
+# Get the current branch
+branch = subprocess.check_output("git rev-parse --abbrev-ref HEAD", shell=True).strip().decode()
 
-if branch == b"master\n":
+# Exit if the branch is already master
+if branch == "master":
     sys.exit(0)
 
-header, *filenames = subprocess.check_output("git log -1 --stat --oneline --name-only",
-                                              shell=True).splitlines()
+# Log information for the last commit
+header, *filenames = subprocess.check_output("git log -1 --stat --oneline --name-only", shell=True).splitlines()
 
-subprocess.run("git checkout master&&git merge --strategy-option theirs main",
-                shell=True)
+# Define the root directory for Markdown files
+root_directory = Path("/home/zan/Obsidian/test/")
 
-files = [Path(f.decode()) for f in filenames if f.endswith(b".md")]
+# Regex patterns for replacements
+pattern_image = re.compile(r"!(\[\[.+\]\])")
+pattern_wikilink = re.compile(r"\[\[(.+?)\|(.+?)\]\]")
 
-for file in files:
-    text = file.read_text()
-    ntext = re.sub(r"!(\[\[.+\]\])", r"\1", text)  # ![[imagename]] --> [[imagename]]
-    ntext = re.sub(r"\[\[(.+?)\|(.+?)\]\]", r"[[\2|\1]]", ntext)  # [[fn|linkTitle]] -> [[linkTitle|fn]]
+# Iterate through Markdown files
+for file in root_directory.rglob("*-*.md"):
+    text = file.read_text(encoding="utf-8")
+
+    # Replace the regex patterns
+    ntext = pattern_image.sub(r"\1", text)  # ![[imagename]] --> [[imagename]]
+    ntext = pattern_wikilink.sub(r"[[\2|\1]]", ntext)  # [[fn|linkTitle]] -> [[linkTitle|fn]]
+
+    # Check if changes are needed
     if ntext != text:
-        file.write_text(ntext)
+        # Write the modified content back to the file
+        file.write_text(ntext, encoding="utf-8")
+        print(f"Changes applied to: {file}")
 
-subprocess.run("git add -A && git commit -m 'Message'",
-                shell=True)
+# Add and commit changes to the current branch
+subprocess.run(["git", "add", "-A"])
+subprocess.run(["git", "commit", "-m", "Message"])
 
-subprocess.run("git checkout main",
-                shell=True)
+# Switch to the master branch and merge changes
+subprocess.run(["git", "checkout", "master"])
+subprocess.run(["git", "merge", "--strategy-option", "theirs", "main"])
+
+# Switch back to the main branch and update local files
+subprocess.run(["git", "checkout", "main", "--", "."])
